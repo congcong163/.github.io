@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2a2a2a">
+    <title>Reo & Ao baby</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">REO & AO</div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#cats">CATS</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#social-links">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="gradient-text">REO & AO BABY</h1>
+            <p class="hero-subtitle">Designed By Yan</p>
+            <!-- 添加社交媒体图标 -->
+            <div class="social-links" id="social-links">
+                <a href="https://space.bilibili.com" target="_blank" class="social-icon">
+                    <i class="ri-bilibili-line"></i>
+                </a>
+                <a href="https://www.douyin.com" target="_blank" class="social-icon">
+                    <i class="ri-tiktok-line"></i>
+                </a>
+            </div>
+            <!-- 添加音乐播放器 -->
+            <audio id="bgMusic" loop>
+                <source src="music/chuxianyoulikai.mp3" type="audio/mp3">
+            </audio>
+            <button class="background-music-button" type="button">
+                <span class="icon">🎵</span>
+                <span>Play Music</span>
+            </button>
+            <!-- 添加聊天框 -->
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- 消息会在这里动态显示 -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Type a message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cats Section -->
+    <section id="cats" class="cats-section">
+        <!-- 添加光束效果 -->
+        <div class="light-beam"></div>
+        <div class="light-beam" style="animation-delay: -4s;"></div>
+        
+        <div class="tech-grid">
+            <div class="tech-panel">
+                <div class="tech-image">
+                    <img src="./imgs/20241129164441.jpg" alt="Daily Life">
+                    <div class="tech-overlay"></div>
+                </div>
+                <div class="tech-content">
+                    <h3>Daily Life</h3>
+                    <p>Recording everyday moments...</p>
+                    <div class="tech-tags">
+                        <span class="gradient-tag">Daily</span>
+                        <span class="gradient-tag">Life</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-panel">
+                <div class="tech-image">
+                    <img src="./imgs/20241129164449.jpg" alt="Fun Stories">
+                    <div class="tech-overlay"></div>
+                </div>
+                <div class="tech-content">
+                    <h3>Fun Stories</h3>
+                    <p>Sharing interesting stories...</p>
+                    <div class="tech-tags">
+                        <span class="gradient-tag">Story</span>
+                        <span class="gradient-tag">Fun</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-panel">
+                <div class="tech-image">
+                    <img src="./imgs/20241129164424.jpg" alt="Special Moments">
+                    <div class="tech-overlay"></div>
+                </div>
+                <div class="tech-content">
+                    <h3>Special Moments</h3>
+                    <p>Capturing precious moments...</p>
+                    <div class="tech-tags">
+                        <span class="gradient-tag">Moment</span>
+                        <span class="gradient-tag">Photo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 添加分节符 -->
+    <div class="page-divider">
+        <div class="divider-text">没有星星的夜空 &nbsp;&nbsp; 没有话题能补充</div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-container">
+            <div class="data-panel">
+                <div class="data-circle">
+                    <img src="imgs/20241129164349.jpg" alt="System Analysis" class="panel-image">
+                    <div class="hover-text">只追寻惊喜，不占用宝藏</div>
+                    <svg width="100%" height="100%" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#01e4ff" stroke-width="1"/>
+                        <path d="M50,5 A45,45 0 0,1 95,50" fill="none" stroke="#01e4ff" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="data-text">System Analysis Data</div>
+            </div>
+            
+            <div class="data-panel">
+                <div class="data-circle">
+                    <img src="imgs/20241129164405.jpg" alt="Performance" class="panel-image">
+                    <div class="hover-text">你的美一缕飘散，吹到我去不了的地方</div>
+                    <svg width="100%" height="100%" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#01e4ff" stroke-width="1"/>
+                        <path d="M5,50 A45,45 0 0,1 50,5" fill="none" stroke="#01e4ff" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="data-text">Performance Metrics</div>
+            </div>
+            
+            <div class="data-panel">
+                <div class="data-circle">
+                    <img src="imgs/20241129164416.jpg" alt="Network" class="panel-image">
+                    <div class="hover-text">神说要有光，于是就诞生了我</div>
+                    <svg width="100%" height="100%" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#01e4ff" stroke-width="1"/>
+                        <path d="M50,95 A45,45 0 0,1 5,50" fill="none" stroke="#01e4ff" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="data-text">Network Status</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
