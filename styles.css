@@ -106,6 +106,12 @@ body {
     color: transparent;
     margin-bottom: 1rem;
     width: 100%;
+    letter-spacing: normal;
+}
+
+.spacing {
+    display: inline-block;
+    width: 200px;
 }
 
 .hero-subtitle {
@@ -663,13 +669,13 @@ body {
 .gallery-section {
     background: linear-gradient(
         45deg,
-        rgba(1, 87, 155, 0.95),  /* 增加不透明度以确保文字可读 */
+        rgba(1, 87, 155, 0.95),
         rgba(0, 229, 255, 0.2)
     ),
-    url('imgs/1.png');  /* 添加背景图片 */
-    background-size: cover;  /* 确保图片完全覆盖区域 */
-    background-position: center;  /* 居中显示图片 */
-    background-attachment: fixed;  /* 加视差滚动效果 */
+    url('images/11 (2).jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
     padding: 4rem 0;
     overflow: hidden;
@@ -689,7 +695,7 @@ body {
         transparent 70%
     );
     animation: pulseLight 8s ease-in-out infinite;
-    pointer-events: none;  /* 确保不影响交互 */
+    pointer-events: none;
 }
 
 /* 添加脉冲动画 */

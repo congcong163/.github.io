@@ -77,15 +77,20 @@ document.addEventListener('DOMContentLoaded', function() {
 // 获取imgs文件夹中的图片
 async function loadImages() {
     const imageFiles = [
-        '20241129164349.jpg',
-        '20241129164405.jpg',
-        '20241129164416.jpg',
-        '20241129164424.jpg',
-        '20241129164431.jpg',
-        '20241129164441.jpg',
-        '20241129164448.jpg',
-        '20241129164449.jpg',
-        '20241129164454.jpg'
+        '11 (1).jpg',
+        '11 (2).jpg',
+        '11 (3).jpg',
+        '11 (4).jpg',
+        '11 (5).jpg',
+        '11 (6).jpg',
+        '11 (7).jpg',
+        '11 (8).jpg',
+        '11 (9).jpg',
+        '11 (10).jpg',
+        '11 (11).jpg',
+        '11 (12).jpg',
+        '11 (13).jpg',
+        '11 (14).jpg'
     ];
 
     // 随机打乱图片数组
@@ -95,7 +100,7 @@ async function loadImages() {
     const panelImages = document.querySelectorAll('.panel-image');
     panelImages.forEach((img, index) => {
         if (shuffledImages[index]) {
-            img.src = `imgs/${shuffledImages[index]}`;
+            img.src = `images/${shuffledImages[index]}`;
         }
     });
 
@@ -107,7 +112,7 @@ async function loadImages() {
                 // 使用淡入淡出效果
                 img.style.opacity = '0';
                 setTimeout(() => {
-                    img.src = `imgs/${shuffled[index]}`;
+                    img.src = `images/${shuffled[index]}`;
                     img.style.opacity = '1';
                 }, 500);
             }
@@ -139,24 +144,20 @@ function sendMessage() {
             const botMessage = document.createElement('div');
             botMessage.className = 'message bot-message';
             
+            // 定义可能的回复
+            const replies = [
+                "今天天气真不错呢！",
+                "要不要一起去散步？",
+                "你知道吗？我最喜欢晒太阳了！",
+                "我们来聊聊天吧！",
+                "你今天看起来心情不错呢！"
+            ];
+            
             // 根据用户输入选择回复
             let reply = "喵~ ";
             if (message.includes('你好') || message.includes('hi') || message.includes('hello')) {
-                reply += "你好呀！我是Reo和Ao，很高兴见到你！";
-            } else if (message.includes('名字')) {
-                reply += "我们是Reo和Ao，是两只可爱的猫咪~";
-            } else if (message.includes('喜欢') || message.includes('爱')) {
-                reply += "我也很喜欢你呢！要一起玩吗？";
+                reply += "你好呀！我是王一一，很高兴见到你！";
             } else {
-                const replies = [
-                    "喵喵喵~",
-                    "要一起玩吗？",
-                    "摸摸头~",
-                    "想吃小鱼干...",
-                    "让我想想怎么回答...",
-                    "你说得对！",
-                    "好有趣啊！"
-                ];
                 reply += replies[Math.floor(Math.random() * replies.length)];
             }
             
